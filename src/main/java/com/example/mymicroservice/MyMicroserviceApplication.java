@@ -1,21 +1,11 @@
 package com.example.mymicroservice;
 
-import com.example.mymicroservice.domain.Difficulty;
-import com.example.mymicroservice.domain.Region;
 import com.example.mymicroservice.service.TourPackageService;
 import com.example.mymicroservice.service.TourService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.fasterxml.jackson.core.type.TypeReference;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.List;
-import static com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility.ANY;
-import static com.fasterxml.jackson.annotation.PropertyAccessor.FIELD;
 @SpringBootApplication
 public class MyMicroserviceApplication implements CommandLineRunner {
 
@@ -31,6 +21,9 @@ public class MyMicroserviceApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		System.out.println("**********************");
+		System.out.println("Application is running");
+		System.out.println("**********************");
 		createTourPackages();
 	}
 
